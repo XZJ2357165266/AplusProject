@@ -4,7 +4,7 @@
     <div class="group-title" @click="toggleMenu">
       <span class="title-text">{{ title }}</span>
       <div class="iconfont arrow-icon">
-        {{ expanded ? '\ue735' : '\ue749' }}
+        {{ expanded ? '\ue749' : '\ue735' }}
       </div>
     </div>
 
@@ -110,7 +110,7 @@ function toggleMenu() {
   }
   }
 
-  /* ✅ 进入动画 */
+  /* 进入动画 */
   .submenu-enter-from {
     opacity: 0;
     transform: translateY(-6px);
@@ -119,7 +119,7 @@ function toggleMenu() {
     transition: all 0.25s ease;
   }
 
-  /* ✅ 离开动画 */
+  /* 离开动画 */
   .submenu-leave-to {
     opacity: 0;
     transform: translateY(-6px);

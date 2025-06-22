@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import LoginPage from '@/views/login/LoginPage.vue'
 import ControlHome from '@/views/control/ControlHome.vue'
-import MapEdge from '@/views/Map/MapEdge.vue'
+import MapPage from '@/views/Map/MapPage.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -21,7 +21,7 @@ const routes: RouteRecordRaw[] = [
   {
   path: '/map',
   name: 'MapEdge',
-  component: MapEdge
+  component: MapPage
 }
 
 ]

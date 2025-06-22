@@ -1,20 +1,15 @@
 <template>
   <div class="control-page">
     <ControlHeader @toggle-nav="toggleSidebar" />
-
     <ControlNav :isVisible="showSidebar" />
 
     <div class="main-area">
-      <!-- 地图容器占70%宽度 -->
       <div class="map-contain">
-        <ControlMap :isSidebarOpen="showSidebar"/>
+        <ControlMap :isSidebarOpen="showSidebar" />
       </div>
 
-      <!-- 控制面板占30%宽度 -->
       <div class="control-board">
-        <ControlCongested />
-        <ControlAI />
-        <ControlManual />
+        <ControlBoard />
       </div>
     </div>
   </div>
@@ -24,9 +19,8 @@
 import { ref } from 'vue'
 import ControlHeader from '@/views/control/ControlHeader.vue'
 import ControlMap from '@/views/control/ControlMap.vue'
-import ControlCongested from '@/views/control/ControlCongested.vue'
-import ControlAI from './ControlAI.vue'
-import ControlManual from './ControlManual.vue'
+import ControlBoard from './ControlBoard.vue'
+
 import ControlNav from './ControlNav.vue'
 
 const showSidebar = ref(false)
@@ -48,29 +42,29 @@ function toggleSidebar() {
   flex-direction: column;
   overflow: hidden;
   background-color: #1E1E2F;
-  padding: 0;
-  margin: 0;
   z-index: 1;
 }
 
 .main-area {
-  height: calc(100% - 0.64rem);
+  height: calc(100% - 0.64rem); // 减去 Header 高度
   margin-top: 0.64rem;
   display: flex;
 }
 
-
 .map-contain {
-  width: 13.59rem;      /* 占据70%宽度 */
-  height: 100%;    /* 填满高度 */
+  width: 13.59rem;// 占 70% 宽度
+  height: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .control-board {
-  width: 5.6rem;
+  width: 5.61rem; // 占 30% 宽度
   height: 100%;
   display: flex;
   flex-direction: column;
   background-color: #1E1E2F;
+  overflow: hidden;
 }
+
 </style>

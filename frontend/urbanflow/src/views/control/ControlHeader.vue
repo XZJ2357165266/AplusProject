@@ -80,7 +80,7 @@ onBeforeUnmount(() => {
   }
 
   .header_right {
-    width: 30%;
+    width: 5.61rem;
   }
 
   .iconfont {
